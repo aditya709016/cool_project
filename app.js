@@ -64,6 +64,6 @@ const server = http.createServer(function (request, response){
     }
 });
 
-server.listen(8000, function () {
-    console.log("Server is up.");
-  });
+server.listen(process.env.PORT || 8000, function(){
+    console.log(`Server listening at http://localhost:${port}`)
+  })
